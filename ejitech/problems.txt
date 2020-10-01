@@ -1,0 +1,16 @@
+==========================================fix the font-style=========================================
+/* fix the font-style  */
+@font-face {
+   font-family: myFirstFont;
+   src: url(C:\Users\EJITECH\Desktop\ejitech\fonts\SansationLight\SansationLight.woff);
+}
+@font-face {
+   font-family: myFirstFont;
+   src: url(C:\Users\EJITECH\Desktop\ejitech\fonts\SansationBold\SansationBold.woff);
+   font-weight: bold;
+   font-stretch: semi-expanded;
+}
+
+body {
+   font-family: myFirstFont;
+}

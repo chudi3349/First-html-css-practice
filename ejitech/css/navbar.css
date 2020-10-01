@@ -1,0 +1,209 @@
+* {
+	box-sizing: border-box;
+}
+
+div.super_container {
+	display: flex;
+}
+
+
+#logo1 {
+	padding-right: 10px;
+	display: inline-block;
+	border: 1px solid white;
+	background-color: white;
+	animation: new 5s linear 2s 3 alternate;
+	cursor: pointer;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+}
+
+#logo1:hover {
+	background-color: #8aff53
+}
+
+#logo1:active {
+	background-color: #8aff53;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+
+@keyframes new {
+	0% {
+		background-color: #ffffbd;
+	}
+
+	25% {
+		background-color: #bbffbd;
+	}
+
+	50% {
+		background-color: #34ff33;
+	}
+
+	75% {
+		background-color: #00ff00;
+	}
+
+	100% {
+		background-color: white;
+	}
+}
+
+/* navbar background  */
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background: linear-gradient(to bottom right, #111, #00FFFF, green);
+	z-index: 1;
+}
+
+
+/* dropdown link  */
+li a,
+.dropbtn {
+	display: inline-block;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	border-radius: 8px;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+	font-size: xx-large;
+	background-color: #478267;
+}
+
+li.dropdown {
+	display: inline-block;
+}
+
+
+/*  Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other  */
+@media only screen and (max-width: 700px) {
+	li.dropdown {
+		display: flex;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+
+	li a,
+	.dropbtn {
+		display: inline-block;
+		font-size: 100%;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 8px;
+	}
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: flex;
+	text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: #7FFFD4
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+#active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+.navbar {
+	flex-direction: column;
+	opacity: 1;
+}
+
+
+/* hotel transition picture  */
+.container {
+	position: relative;
+	width: 100%;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	height: auto;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+}
+
+.container:hover .overlay {
+	opacity: 1;
+
+}
+
+/* reception picture  */
+
+.reception {
+	column-count: 3;
+	column-gap: 40px;
+	column-rule: 1px solid lightblue;
+	display: inline-block;
+	margin-top: 100px;
+	padding: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+	.reception {
+		display: inline-block;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.ejitech {
+		margin-top: inherit;
+	}
+}
+
+/* fix the font-style  */
+@font-face {
+	font-family: myFirstFont;
+	src: url(C:\Users\EJITECH\Desktop\ejitech\fonts\SansationLight\SansationLight.woff);
+}
+
+@font-face {
+	font-family: myFirstFont;
+	src: url(C:\Users\EJITECH\Desktop\ejitech\fonts\SansationBold\SansationBold.woff);
+	font-weight: bold;
+	font-stretch: semi-expanded;
+}
+
+body {
+	font-family: myFirstFont;
+}
+
+/*  Responsive layout - when the screen is less than 700px wide, Eji-Tech Life and reception picture flex  */
+@media only screen and (max-width: 700px) {
+	div.reception {
+		display: flex;
+		margin-top: 300Px;
+	}
+}
